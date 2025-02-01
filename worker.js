@@ -1125,7 +1125,7 @@ var require_loader = __commonJS({
       return -1;
     }
     function simpleEscapeSequence(c) {
-      return c === 48 ? "\0" : c === 97 ? "\x07" : c === 98 ? "\b" : c === 116 ? "	" : c === 9 ? "	" : c === 110 ? "\n" : c === 118 ? "\v" : c === 102 ? "\f" : c === 114 ? "\r" : c === 101 ? "\x1B" : c === 32 ? " " : c === 34 ? '"' : c === 47 ? "/" : c === 92 ? "\\" : c === 78 ? "\x85" : c === 95 ? "\xA0" : c === 76 ? "\u2028" : c === 80 ? "\u2029" : "";
+      return c === 48 ? "\0" : c === 97 ? "\x07" : c === 98 ? "\b" : c === 116 ? "  " : c === 9 ? " " : c === 110 ? "\n" : c === 118 ? "\v" : c === 102 ? "\f" : c === 114 ? "\r" : c === 101 ? "\x1B" : c === 32 ? " " : c === 34 ? '"' : c === 47 ? "/" : c === 92 ? "\\" : c === 78 ? "\x85" : c === 95 ? "\xA0" : c === 76 ? "\u2028" : c === 80 ? "\u2029" : "";
     }
     function charFromCodepoint(c) {
       if (c <= 65535) {
@@ -3243,7 +3243,7 @@ function replaceHysteria(link, replacements) {
   replacements[randomDomain] = server;
   return link.replace(server, randomDomain);
 }
-function replaceHysteria2(link, replacements) {
+function replaceHysteria2(link, replacements, isRecovery) {
     const randomUUID = generateRandomUUID();
     const randomDomain = generateRandomStr(10) + ".com";
     const regexMatch = link.match(/(hysteria2):\/\/(.*)@(.*?):/);
